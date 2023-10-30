@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles Asignatura</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="clase">
+    <ion-item>
+      <ion-input
+        type="text"
+        label="Nombre"
+        labelPlacement="stacked"
+        [(ngModel)]="clase.nombreClase"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="text"
+        label="Profesor"
+        labelPlacement="stacked"
+        [(ngModel)]="clase.profesor"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="text"
+        label="Horario"
+        labelPlacement="stacked"
+        [(ngModel)]="clase.horario"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="text"
+        label="Sigla"
+        labelPlacement="stacked"
+        [(ngModel)]="clase.sigla"
+      ></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-button expand="block" color="success" (click)="updateClase()">
+    <ion-icon slot="start" name="save"></ion-icon>
+    Actualizar
+  </ion-button>
+
+  <ion-button expand="block" color="danger" (click)="deleteClase()">
+    <ion-icon slot="start" name="trash-outline"></ion-icon>
+    Eliminar
+  </ion-button>
+</ion-content>
