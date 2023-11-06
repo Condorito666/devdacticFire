@@ -9,8 +9,8 @@ import { ModalPage } from './modal/modal.page';
   styleUrls: ['./asignatura.page.scss'],
 })
 export class AsignaturaPage implements OnInit {
-  //el qr tiene que generar una nueva instancia de la clase con timestamp
   clases = [];
+
   constructor(
     private dataService: DataService,
     private alertController: AlertController,

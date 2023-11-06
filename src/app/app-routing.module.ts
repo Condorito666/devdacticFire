@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'asignatura',
+    redirectTo: 'estudiantes',
     pathMatch: 'full',
   },
   {
@@ -22,6 +22,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/asignatura/asignatura.module').then(
         (m) => m.AsignaturaPageModule
+      ),
+  },
+  {
+    path: 'estudiantes',
+    loadChildren: () =>
+      import('./pages/estudiantes/estudiantes.module').then(
+        (m) => m.EstudiantesPageModule
       ),
   },
 ];
